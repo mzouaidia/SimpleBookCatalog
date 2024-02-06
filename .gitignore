@@ -396,3 +396,12 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/.idea/.idea.SimpleBookCatalog/.idea/.gitignore
+/.idea/.idea.SimpleBookCatalog/.idea/dataSources.xml
+/.idea/.idea.SimpleBookCatalog/.idea/deployment.xml
+/.idea/.idea.SimpleBookCatalog/.idea/encodings.xml
+/.idea/.idea.SimpleBookCatalog/.idea/indexLayout.xml
+/.idea/.idea.SimpleBookCatalog/.idea/vagrant.xml
+/.idea/.idea.SimpleBookCatalog/.idea/vcs.xml
+/.idea/.idea.SimpleBookCatalog/.idea/webServers.xml
+/.idea/config/applicationhost.config
