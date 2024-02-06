@@ -395,6 +395,7 @@ FodyWeavers.xsd
 *.msp
 
 # JetBrains Rider
+/_ReSharper.Caches/
 *.sln.iml
 /.idea/.idea.SimpleBookCatalog/.idea/.gitignore
 /.idea/.idea.SimpleBookCatalog/.idea/dataSources.xml
@@ -405,3 +406,34 @@ FodyWeavers.xsd
 /.idea/.idea.SimpleBookCatalog/.idea/vcs.xml
 /.idea/.idea.SimpleBookCatalog/.idea/webServers.xml
 /.idea/config/applicationhost.config
+/.vs/ProjectEvaluation/simplebookcatalog.metadata.v7.bin
+/.vs/ProjectEvaluation/simplebookcatalog.projects.v7.bin
+/.vs/SimpleBookCatalog/config/applicationhost.config
+/.vs/SimpleBookCatalog/DesignTimeBuild/.dtbcache.v2
+/.vs/SimpleBookCatalog/FileContentIndex/11d8969f-d023-4c5d-8ebf-16a3939c98f1.vsidx
+/.vs/SimpleBookCatalog/FileContentIndex/5700f32f-d409-4d54-a1a3-dce4cec1d8b5.vsidx
+/.vs/SimpleBookCatalog/FileContentIndex/86e2a2e5-0700-4e88-b1e5-b090aea3324b.vsidx
+/.vs/SimpleBookCatalog/FileContentIndex/8f15767c-a906-4817-926b-5e1bb52d5053.vsidx
+/.vs/SimpleBookCatalog/FileContentIndex/d68179d1-0be9-45a3-81c2-e5d42936df2c.vsidx
+/.vs/SimpleBookCatalog/v17/.futdcache.v2
+/SimpleBookCatalog.Api/appsettings.Development.json
+/SimpleBookCatalog.Api/appsettings.json
+/SimpleBookCatalog.App/Properties/launchSettings.json
+/SimpleBookCatalog.App/Properties/PublishProfiles/marcin24-001-site1 - FTP.pubxml
+/SimpleBookCatalog.App/Properties/PublishProfiles/marcin24-001-site1 - Web Deploy.pubxml
+/SimpleBookCatalog.Api/appsettings.Development.json
+/SimpleBookCatalog.Api/appsettings.json
+/SimpleBookCatalog.App/Properties/launchSettings.json
+/SimpleBookCatalog.App/wwwroot/appsettings.json
+/.gitignore
+/SimpleBookCatalog.Api/appsettings.Development.json
+/SimpleBookCatalog.Api/appsettings.json
+/SimpleBookCatalog.App/Properties/launchSettings.json
+/SimpleBookCatalog.App/wwwroot/appsettings.json
+/.vs/SimpleBookCatalog/FileContentIndex/17743c89-4891-40bb-b546-504340f79a13.vsidx
+/.vs/SimpleBookCatalog/FileContentIndex/a603ffe7-1112-4354-b6b7-21d133de9da2.vsidx
+/.vs/SimpleBookCatalog/FileContentIndex/b47e9c5f-8231-43dd-b24b-6ee6df5e3cc5.vsidx
+/.vs/SimpleBookCatalog/FileContentIndex/df43dec3-79d4-4830-98c3-562e444235ce.vsidx
+/SimpleBookCatalog.Api/appsettings.Development.json
+/SimpleBookCatalog.Api/appsettings.json
+/SimpleBookCatalog.App/wwwroot/appsettings.json

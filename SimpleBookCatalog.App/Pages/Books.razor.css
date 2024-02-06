@@ -1,0 +1,31 @@
+﻿.table-headmy {
+    background-color: cornflowerblue;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.actions {
+    text-align: center;
+    width: 200px;
+}
+
+.spinner {
+    border-top: 15px solid royalblue;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 800ms linear infinite;
+    top: 40%;
+    left: 50%;
+    position: absolute;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}

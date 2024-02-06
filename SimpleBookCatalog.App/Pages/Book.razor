@@ -1,0 +1,68 @@
+﻿@page "/Book/{back}"
+@page "/Book/{back}/{id}"
+@using SimpleBookCatalog.Domain.Enums
+
+@if (Back is not { Length: 3 })
+{
+    <p>Sorry, there's nothing at this address.</p>
+
+    return;
+}
+
+@if (string.IsNullOrEmpty(Id))
+{
+    <PageTitle>Dodanie książki</PageTitle>
+    <h3 class="page-title">Dodanie książki</h3>
+}
+else
+{
+    <PageTitle>Edycja książki</PageTitle>
+    <h3 class="page-title">Edycja książki</h3>
+}
+<div class="container-fluid">
+    <EditForm Model="@BookModel" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+        <DataAnnotationsValidator/>
+        <ValidationSummary/>
+
+        <div class="row col-md-3">
+            <div class="form-group">
+                <label class="col-md-3">Tytół</label>
+                <InputText class="col-md-8 form-control" @bind-Value="BookModel.Title"></InputText>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3">Autor</label>
+                <InputText class="col-md-8 form-control" @bind-Value="BookModel.Author"></InputText>
+            </div>
+
+            <div class="form-group">
+                <label>Data publikacji</label>
+                <InputDate class="col-md-8 form-control" @bind-Value="BookModel.PublicationDate"></InputDate>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-3">Kategoria</label>
+                <InputSelect class="form-control form-select" @bind-Value="BookModel.Category">
+                    @foreach (var it in Enum.GetValues(typeof(Category)))
+                    {
+                        <option value="@it">@it</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="form-group">
+                @if (string.IsNullOrEmpty(Id))
+                {
+                    <button type="submit" class="btn btn-primary btn-add-save">Dodaj</button>
+                }
+                else
+                {
+                    <button type="submit" class="btn btn-primary btn-add-save">Zapisz</button>
+                }
+            </div>
+
+            <div class="form-group">
+                <p>@Message</p>
+            </div>
+        </div>
+    </EditForm>
+</div>

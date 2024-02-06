@@ -1,0 +1,19 @@
+﻿@page "/books-radzen-grid"
+@using SimpleBookCatalog.Application.Dtos
+@using HorizontalAlign = Radzen.HorizontalAlign
+
+<PageTitle>Lista książek - Radzen Grid Component</PageTitle>
+
+<h3 class="page-title">Lista książek - Radzen Grid Component</h3>
+
+<a href="@("book/rdz")" class="btn btn-success btn-add">Dodaj książkę</a>
+
+<RadzenDataGrid Data="@Books" TItem="BookResponseDto" AllowFiltering="true" AllowColumnResize="true" AllowAlternatingRows="true" FilterMode="FilterMode.Simple" AllowSorting="true" PageSize="7" AllowPaging="true" PagerHorizontalAlign="HorizontalAlign.Center" ShowPagingSummary="true" LogicalFilterOperator="LogicalFilterOperator.Or">
+    <Columns>
+        <RadzenDataGridColumn TItem="BookResponseDto" Property="Id" Title="Id" />
+        <RadzenDataGridColumn TItem="BookResponseDto" Property="Title" Title="Title" />
+        <RadzenDataGridColumn TItem="BookResponseDto" Property="Author" Title="Author" />
+        <RadzenDataGridColumn TItem="BookResponseDto" Property="PublicationDate" Title="Publication Date" FormatString="{0:d}" />
+        <RadzenDataGridColumn TItem="BookResponseDto" Property="Category" Title="Category" />
+    </Columns>
+</RadzenDataGrid>

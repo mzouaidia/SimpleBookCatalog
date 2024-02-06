@@ -1,0 +1,42 @@
+﻿@page "/Books"
+
+<PageTitle>Lista książek</PageTitle>
+
+<h3 class="page-title">Lista książek - Standard Html Table</h3>
+
+<a href="@("book/bks/")" class="btn btn-success btn-add">Dodaj książkę</a>
+
+@if (!_books.Any())
+{
+    <div class="spinner"></div>
+}
+else
+{
+    <table class="table table-bordered table-hover table-striped rounded rounded-1">
+        <thead class="align-middle text-center table-headmy">
+        <tr class="align-middle">
+            <th>Tytół</th>
+            <th>Autor</th>
+            <th>Data publikacji</th>
+            <th>Kategoria</th>
+            <th>Akcje</th>
+        </tr>
+        </thead>
+        <tbody class="align-middle text-center">
+        @foreach (var book in _books)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.PublicationDate.ToShortDateString()</td>
+                <td>@book.Category</td>
+                <td class="actions">
+                    @* <button class="btn btn-outline-secondary bi bi-info-lg btn-details"></button> *@
+                    <button @onclick="@(() => EditBook(book.Id))" class="btn btn-outline-secondary bi bi-pencil btn-edit"></button>
+                    <button @onclick="@(() => DeleteBook(book.Id))" class="btn btn-outline-secondary bi bi-trash3 btn-del"></button>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,21 @@
+label {
+    font-weight: bold;
+}
+
+.form-group {
+    margin-top: 15px;
+}
+
+::deep .validation-errors {
+    border: dashed 2px firebrick;
+    border-radius: 8px;
+    background-color: #FFC9C9;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+::deep .validation-message {
+    font-weight: bold;
+    color: #b90000;
+}

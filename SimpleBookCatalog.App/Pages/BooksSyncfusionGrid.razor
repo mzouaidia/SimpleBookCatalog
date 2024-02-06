@@ -1,0 +1,20 @@
+﻿@page "/books-syncfusion-grid"
+@using SimpleBookCatalog.Application.Dtos
+@using TextAlign = Syncfusion.Blazor.Grids.TextAlign
+
+<PageTitle>Lista książek - Syncfusion Grid Component</PageTitle>
+
+<h3 class="page-title">Lista książek - Syncfusion Grid Component</h3>
+
+<a href="@("book/sfg")" class="btn btn-success btn-add">Dodaj książkę</a>
+
+<SfGrid DataSource="@Books" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
+    <GridPageSettings PageSize="6"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field="@nameof(BookResponseDto.Id)"></GridColumn>
+        <GridColumn Field="@nameof(BookResponseDto.Title)"></GridColumn>
+        <GridColumn Field="@nameof(BookResponseDto.Author)"></GridColumn>
+        <GridColumn Field="@nameof(BookResponseDto.PublicationDate)" HeaderText="Publication Date" HeaderTextAlign="TextAlign.Center" Format="yyy-MM-dd"></GridColumn>
+        <GridColumn Field="@nameof(BookResponseDto.Category)"></GridColumn>
+    </GridColumns>
+</SfGrid>
